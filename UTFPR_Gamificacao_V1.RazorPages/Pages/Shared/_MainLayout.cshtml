@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurant Manager</title>
+    </head>
+    <body>
+        <header>
+            <partial name="./_MainMenuPartialPage.cshtml"/>
+        </header>
+        <main>
+            @RenderBody()
+        </main>
+        <p><hr/></p>
+        <footer>Mateus Stamm - TDS 2023 - UTFPR</footer>
+
+        @RenderSection("scripts", required:false)
+    </body>
+</html>

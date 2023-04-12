@@ -1,0 +1,28 @@
+@page
+@using UTFPR_Gamificacao_V1.RazorPages.Models
+@model UTFPR_Gamificacao_V1.RazorPages.Pages.Mesas.Index
+
+<h1>Mesas</h1>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Mesas.FirstOrDefault().MesaId)</th>
+                <th>@Html.DisplayNameFor(model => model.Mesas.FirstOrDefault().Numero)</th>
+                <th>@Html.DisplayNameFor(model => model.Mesas.FirstOrDefault().Status)</th>
+                <th>@Html.DisplayNameFor(model => model.Mesas.FirstOrDefault().HoraAbertura)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var mesa in Model.Mesas)
+            {
+                <tr>
+                    <td>@mesa.MesaId</td>
+                    <td>@mesa.Numero</td>
+                    <td>@mesa.Status</td>
+                    <td>@mesa.HoraAbertura</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div> 
